@@ -1,0 +1,81 @@
+{
+	"version": "0.0.0",
+	"license": "MIT",
+	"repository": "https://github.com/theurgi/eslint-config",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/index.js",
+	"exports": {
+		".": "./dist/index.js",
+		"./node": "./dist/node.js"
+	},
+	"scripts": {
+		"build": "rm -rf dist; esbuild src/**/*.ts --format=cjs --outdir=dist",
+		"type-check": "tsc --noEmit --skipLibCheck",
+		"lint": "eslint --cache .",
+		"test": "run-p 'test:*'",
+		"dev": "run-p 'dev:*'",
+		"dev:build": "pnpm build --watch",
+		"prepack": "pnpm build && clean-pkg-json"
+	},
+	"engines": {
+		"node": ">=16.18.0"
+	},
+	"peerDependencies": {
+		"eslint": "^7.15.0 || ^8.0.0"
+	},
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.50.0",
+		"@typescript-eslint/parser": "^5.50.0",
+		"confusing-browser-globals": "^1.0.11",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-define-config": "^1.14.0",
+		"eslint-import-resolver-typescript": "^3.5.3",
+		"eslint-plugin-astro": "^0.23.0",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jest": "^27.2.1",
+		"eslint-plugin-jsonc": "^2.6.0",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-no-use-extend-native": "^0.5.0",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-regexp": "^1.12.0",
+		"eslint-plugin-svelte": "^2.15.0",
+		"eslint-plugin-unicorn": "^45.0.2",
+		"eslint-plugin-vue": "^9.9.0",
+		"local-pkg": "^0.4.3"
+	},
+	"devDependencies": {
+		"@types/confusing-browser-globals": "^1.0.0",
+		"@types/eslint": "^8.4.10",
+		"@types/node": "^18.11.18",
+		"@types/react": "^18.0.27",
+		"astro": "^2.0.5",
+		"clean-pkg-json": "^1.2.0",
+		"esbuild": "^0.17.5",
+		"eslint": "^8.33.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.8.3",
+		"react": "^18.2.0",
+		"svelte": "^3.55.1",
+		"tsx": "^3.12.2",
+		"typescript": "^4.9.5"
+	},
+	"eslintConfig": {
+		"extends": [
+			"./dist/index",
+			"./dist/node"
+		]
+	},
+	"prettier": {
+		"printWidth": 100,
+		"semi": false,
+		"singleQuote": true,
+		"tabWidth": 2,
+		"useTabs": true
+	}
+}
