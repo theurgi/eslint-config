@@ -1,5 +1,9 @@
 {
+	"name": "@theurgi/eslint-config",
 	"version": "0.0.0-semantic-release",
+	"publishConfig": {
+		"access": "public"
+	},
 	"license": "MIT",
 	"repository": "https://github.com/theurgi/eslint-config",
 	"files": [
