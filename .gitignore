@@ -6,6 +6,10 @@ target
 # cache
 .eslintcache
 
+# coverage
+.nyc_output
+coverage
+
 # dependencies
 .pnpm-store/
 node_modules/
@@ -16,10 +20,6 @@ yarn.lock
 *.log
 logs
 npm-debug.log*
-
-# coverage
-.nyc_output
-coverage
 
 # os
 .DS_Store
