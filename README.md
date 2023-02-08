@@ -1,12 +1,12 @@
-# @theurgi/eslint-config
+# eslint-config
 
-A [shareable ESLint config](https://eslint.org/docs/latest/extend/shareable-configs).
+A dynamic multi-framework ESLint config.
 
 ## Features
 
-- Dynamic ESLint rules based on your project's dependencies (React, TypeScript, Svelte, Vue, etc.).
-- Installs as a single devDependency: No need to [install a bunch of internally extended configs](https://github.com/eslint/eslint/issues/3458#issue-102077087).
-- Optionally overrides ESLint formatting with [Prettier](https://prettier.io/).
+- Dynamic ESLint rules based on your project's dependencies (React, TypeScript, Svelte, Vue, etc.)
+- Installs as a single devDependency: No need to [install a bunch of internally extended configs](https://github.com/eslint/eslint/issues/3458#issue-102077087)
+- Optionally overrides ESLint formatting with [Prettier](https://prettier.io/)
 
 ## Supported frameworks/tools
 
@@ -53,13 +53,13 @@ pnpm i -D @theurgi/eslint-config
 
 ## Usage
 
-Extend this package in your local eslint configuration (e.g. .eslintrc.json):
+Extend this package in your local eslint config (e.g. .eslintrc.json):
 
 ### For non Node.js projects:
 
 ```json
 {
-	"extends": ["@theurgi/eslint-config"]
+  "extends": ["@theurgi/eslint-config"]
 }
 ```
 
@@ -69,7 +69,7 @@ This config includes all the non-Node rules _plus_ Node specific rules and overr
 
 ```json
 {
-	"extends": ["@theurgi/eslint-config/node"]
+  "extends": ["@theurgi/eslint-config/node"]
 }
 ```
 
@@ -81,25 +81,25 @@ For error highlighting and auto-fix-on-save, install the [ESLint extension](http
 
 ```json
 {
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 
-	"eslint.validate": [
-		"astro",
-		"javascript",
-		"javascriptreact",
-		"json",
-		"json5",
-		"jsonc",
-		"svelte",
-		"typescript",
-		"typescriptreact",
-		"vue"
-	]
+  "eslint.validate": [
+    "astro",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "json5",
+    "jsonc",
+    "svelte",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ]
 }
 ```
 
-## 🙏 Thanks
+## Thanks 🙏
 
 Special thanks to [privatenumber](https://github.com/privatenumber) whose [eslint-config](https://github.com/privatenumber/eslint-config) was the primary reference for this package.
