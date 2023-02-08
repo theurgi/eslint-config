@@ -83,7 +83,7 @@
 		"useTabs": true,
 		"overrides": [
 			{
-				"files": "*.{yml,yaml}",
+				"files": "*.{md,yml,yaml}",
 				"options": {
 					"useTabs": false
 				}
