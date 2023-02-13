@@ -50,7 +50,10 @@ export = defineConfig({
 							'bundledDependencies',
 							'bundleDependencies',
 							'overrides',
+							'pnpm',
+							'commitlint',
 							'eslintConfig',
+							'prettier',
 						],
 					},
 					{
