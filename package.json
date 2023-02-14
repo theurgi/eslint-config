@@ -29,6 +29,14 @@
 	"peerDependencies": {
 		"eslint": "^7.15.0 || ^8.0.0"
 	},
+	"peerDependenciesMeta": {
+		"svelte": {
+			"optional": true
+		},
+		"typescript": {
+			"optional": true
+		}
+	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.50.0",
 		"@typescript-eslint/parser": "^5.50.0",
