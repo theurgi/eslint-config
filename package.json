@@ -27,9 +27,7 @@
 		"node": ">=16.18.0"
 	},
 	"peerDependencies": {
-		"eslint": "^7.15.0 || ^8.0.0",
-		"svelte": "*",
-		"typescript": "*"
+		"eslint": "^7.15.0 || ^8.0.0"
 	},
 	"peerDependenciesMeta": {
 		"svelte": {
