@@ -41,26 +41,24 @@ export = defineConfig({
 		// https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1273#issuecomment-1069506684
 		'unicorn/prefer-json-parse-buffer': 'off',
 
-		// NOTE Be aware of this but leave it on unless it becomes a problem.
-		//
 		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/898fcb4/docs/rules/prevent-abbreviations.md
-		// 'unicorn/prevent-abbreviations': [
-		// 	'error',
-		// 	{
-		// 		// case insensitive and matches substrings
-		// 		replacements: {
-		// 			args: false,
-		// 			dev: false,
-		// 			dist: false,
-		// 			env: false,
-		// 			pkg: false,
-		// 			prop: false,
-		// 			props: false,
-		// 			ref: false,
-		// 			src: false,
-		// 		},
-		// 	},
-		// ],
+		'unicorn/prevent-abbreviations': [
+			'error',
+			{
+				// case insensitive and matches substrings
+				replacements: {
+					args: false,
+					dev: false,
+					dist: false,
+					env: false,
+					pkg: false,
+					prop: false,
+					props: false,
+					ref: false,
+					src: false,
+				},
+			},
+		],
 
 		'unicorn/template-indent': 'off',
 	},
