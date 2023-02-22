@@ -9,6 +9,9 @@ export = defineConfig({
 
 		'unicorn/consistent-function-scoping': 'off',
 
+		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v45.0.2/docs/rules/filename-case.md
+		'unicorn/filename-case': 'off',
+
 		'unicorn/no-array-for-each': 'off',
 
 		// Handled by eslint-plugin-n/no-deprecated-api. Disabled to avoid conflicts.
