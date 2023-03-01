@@ -6,6 +6,8 @@ export = defineConfig({
 	extends: 'eslint:recommended',
 
 	env: {
+		browser: true,
+		node: true,
 		/**
 		 * Globals shared across Node.js and Browser
 		 * https://github.com/sindresorhus/globals/blob/v13.18.0/globals.json#L1711
@@ -20,5 +22,14 @@ export = defineConfig({
 
 	rules: {
 		'no-restricted-globals': ['error', ...confusingBrowserGlobals],
+	},
+
+	settings: {
+		'import/resolver': {
+			node: {
+				extensions: ['.js', '.jsx', '.ts', '.tsx'],
+			},
+			typescript: {},
+		},
 	},
 })

@@ -20,12 +20,6 @@ export = defineConfig(
 							parser: '@typescript-eslint/parser',
 							extraFileExtensions: ['.astro'],
 						},
-
-						settings: {
-							'import/resolver': {
-								typescript: {},
-							},
-						},
 					},
 				],
 		  }
