@@ -21,6 +21,10 @@ export = defineConfig(
 							extraFileExtensions: ['.astro'],
 						},
 					},
+					{
+						files: ['**/*.astro/*.js', '*.astro/*.js'],
+						parser: '@typescript-eslint/parser',
+					},
 				],
 		  }
 		: {}
