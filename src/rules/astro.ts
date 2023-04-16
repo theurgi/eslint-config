@@ -22,6 +22,7 @@ export = defineConfig(
 						},
 					},
 					{
+						// enable ts for client-side script tags
 						files: ['**/*.astro/*.js', '*.astro/*.js'],
 						parser: '@typescript-eslint/parser',
 					},
@@ -34,6 +35,12 @@ export = defineConfig(
 									ignore: ['astro:'],
 								},
 							],
+						},
+					},
+					{
+						files: ['env.d.ts'],
+						rules: {
+							'@typescript-eslint/triple-slash-reference': 'off',
 						},
 					},
 				],
