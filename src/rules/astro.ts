@@ -25,6 +25,17 @@ export = defineConfig(
 						files: ['**/*.astro/*.js', '*.astro/*.js'],
 						parser: '@typescript-eslint/parser',
 					},
+					{
+						files: ['*.js', '*.jsx', '*.ts', '*.tsx', '*.astro'],
+						rules: {
+							'import/no-unresolved': [
+								'error',
+								{
+									ignore: ['astro:'],
+								},
+							],
+						},
+					},
 				],
 		  }
 		: {}
